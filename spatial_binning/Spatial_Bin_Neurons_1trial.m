@@ -13,13 +13,6 @@
     nBin = ceil(pathLength/binLength);
    
     % extract data from data matrix called WD1
-    %nCell = size(WS1, 2) - 12;
-    %time = WS1(:, 2);
-    %odor = WS1(:, 11);
-    %distance = WS1(:, 8);
-    %lap = WS1(:, 10);
-    %cell = WS1(:, 13:end);
-    
     nCell = size(WD1, 2) - 12;
     time = WD1(:, 2);
     odor = WD1(:, 11);
