@@ -36,9 +36,6 @@ colorMax = 60; %sets the range for the colormap
     iLast = max(find(lap==nLap)); %last time bin on lap
     iLap = find(lap(1:iLast-1)<lap(2:iLast)); %finds where laps start
     iLap = [0; iLap]; %adds a 0 for the first lap
-
-    
-    
     
  
 
@@ -138,7 +135,7 @@ lickBin = zeros(1, nLap, nBin); %bin the lickrate data
     lick1Bin(:,:,1)=0;
     lick2Bin(:,:,1)=0;
     
-     lick1Bin_0 = lick1Bin;
+    lick1Bin_0 = lick1Bin;
  save('lick1Bin_0', 'lick1Bin_0');
       
 
@@ -146,4 +143,5 @@ lickBin = zeros(1, nLap, nBin); %bin the lickrate data
     %computes mean lickrate across trials for each cell and both odor conditions
     lick1Mean = squeeze(mean(lick1Bin, 2));
     lick1Mean_0 = lick1Mean;
+    
     save('lick1Mean_0', 'lick1Mean_0');

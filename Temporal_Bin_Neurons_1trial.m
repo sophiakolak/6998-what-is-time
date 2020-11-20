@@ -1,3 +1,8 @@
+% Temporal_Bin_Neurons_1trial.m
+% adapted from Spatial_Bin_Neurons_1trial.m
+% 11.14.20
+% Derek Wacks
+
 % Start by loading the data.  Drag one of the data files to the Matlab
 % command window.  This will open a window.  From the top of the window
 % choose "Numerical Matrix".  Just above the data array, there will be
@@ -8,19 +13,21 @@
 % same data.
 
     skipLaps = 0;       %skip the first 6 laps
-    pathLength = 4000;  %length of run
-    binLength = 100;    %run is divided into 40 bins of 0.1 m length
+    %pathLength = 4000;  %length of run (cm)
+    pathLength = 4000;  %total time of each run?
+    %binLength = 100;   %run is divided into 40 bins of 0.1 m length
+    binLength = 500; % time in ms
     nBin = ceil(pathLength/binLength);
    
     % extract data from data matrix called WD1
     % 11.14.20 NOTE: below calls were made to WS1; I changed to WD1 to
     % match line 15 instructons
-    nCell = size(WS1, 2) - 12;
-    time = WS1(:, 2);
-    odor = WS1(:, 11);
-    distance = WS1(:, 8);
-    lap = WS1(:, 10);
-    cell = WS1(:, 13:end);
+    nCell = size(WD1, 2) - 12;
+    time = WD1(:, 2);
+    odor = WD1(:, 11);
+    distance = WD1(:, 8);
+    lap = WD1(:, 10);
+    cell = WD1(:, 13:end);
 
     
     nLap = max(lap) - skipLaps; %number of laps being studied

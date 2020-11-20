@@ -7,7 +7,6 @@
 % the same data, set new = 0 so it doesn't waste time reprocessing the
 % same data.
 
-
     skipLaps = 0;       %skip the first 6 laps
     pathLength = 4000;  %length of run
     binLength = 100;    %run is divided into 40 bins of 0.1 m length
