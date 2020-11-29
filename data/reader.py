@@ -36,9 +36,15 @@ print("LEN", n_cell)
 # i.e. the row that was previously selected
 # iLast(max())  # find way to find last lap --> just use counter?
 
-lapDistance = []
-for i in range(0, nlap):
+#lapDistance = []
+#for i in range(0, nlap):
     #lapDistance.append( distance(iLap(i),iLap(i+1)) ) range in iLap
+
+lap_dictionary = {}
+for i in range(0, max(lap)):
+    lap_dictionary[i] = data.loc[data[9] == i]
+print(lap_dictionary)
+
 
 """
 ilast =
