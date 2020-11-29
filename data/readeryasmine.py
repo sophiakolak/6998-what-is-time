@@ -12,7 +12,7 @@ print(length)
 #print(data.iloc[1])
 
 
-print("hi! i hate computer science")
+print("hi! i love computer science")
 
 """
 for i, j in data.iterrows():
